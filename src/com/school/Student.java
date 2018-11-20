@@ -78,19 +78,16 @@ public class Student {
 	public String introduce() {
 		return "学生的详细信息如下:\n学生姓名："+this.getStudentName()+
 				"\n学生年龄："+this.getStudentAge()+"\n学生性别："+
-				this.getStudentGender()+"\n学号："+this.getSutdentNo();
+				this.getStudentGender()+"\n学号："+this.getSutdentNo()+
+				"\n学生专业："+this.getStudentSubject().getSubjectName();
 	}
 	
 	public String introduce(Subject subject) {
-		if (subject == null) {
-			return "error";
-		}else {
-			return "学生的详细信息如下:\n学生姓名："+this.getStudentName()+
-					"\n学生年龄："+this.getStudentAge()+"\n学生性别："+
-					this.getStudentGender()+"\n学号："+this.getSutdentNo()+
-					"\n学生的专业："+subject.getSubjectName()+"\n学制："+
-					subject.getSubjectYear()+"年";
-		}
+		return "学生的详细信息如下:\n学生姓名："+this.getStudentName()+
+				"\n学生年龄："+this.getStudentAge()+"\n学生性别："+
+				this.getStudentGender()+"\n学号："+this.getSutdentNo()+
+				"\n学生的专业："+subject.getSubjectName()+"\n学制："+
+				subject.getSubjectYear()+"年";
 		
 	}
 
