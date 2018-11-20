@@ -8,7 +8,7 @@ public class Student {
 	private Subject studentSubject;
 	
 	public Student() {
-		
+		System.out.println(this.getStudentSubject().getSubjectYear());
 	}
 
 	public Student(String studentName, String sutdentNo, String studentGender, int studentAge, Subject studentSubject) {
@@ -68,7 +68,12 @@ public class Student {
 	}
 	
 	public Subject getStudentSubject() {
+		if (this.studentSubject==null) {
+			Subject subject = new Subject();
+			return subject;
+		}else {
 		return studentSubject;
+		}
 	}
 
 	public void setStudentSubject(Subject studentSubject) {
