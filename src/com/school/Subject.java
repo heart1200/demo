@@ -4,6 +4,8 @@ public class Subject {
 	private String subjectName;
 	private String subjectNo;
 	private int subjectYear;
+	private Student students[];
+	private int studentNum;
 	
 	public Subject() {
 		
@@ -37,10 +39,44 @@ public class Subject {
 		this.subjectYear = subjectYear;
 	}
 	
+	public Student[] getStudents() {
+		if (students ==null) {
+			this.students = new Student[200];
+		}
+		return students;
+	}
+
+	public void setStudents(Student[] students) {
+		this.students = students;
+	}
+
+	public int getStudentNum() {
+		return studentNum;	
+	}       
+
+	public void setStudentNum(int studentNum) {
+		this.studentNum = studentNum;
+	}
+
 	public String info() {
 		return "专业信息如下：\n专业学科名："+getSubjectName()
 				+ "\n专业学科编号："+getSubjectNo()+"\n专业学科学制:"
 				+getSubjectYear();
 	}
+	
+	//将学生添加进入数组
+	public void addStudents(Student stu) {
+		int i;
+		for(i = 0;i < this.getStudents().length;i++) {
+			if(this.getStudents()[i] == null) {
+				this.getStudents()[i] = stu;
+				this.studentNum = i+1;
+				break;
+			}
+		}
+	}
 
 }
+
+
+

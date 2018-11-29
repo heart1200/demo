@@ -8,7 +8,7 @@ public class Student {
 	private Subject studentSubject;
 	
 	public Student() {
-		System.out.println(this.getStudentSubject().getSubjectYear());
+		
 	}
 
 	public Student(String studentName, String sutdentNo, String studentGender, int studentAge, Subject studentSubject) {
