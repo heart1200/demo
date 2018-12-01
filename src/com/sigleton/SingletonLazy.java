@@ -8,10 +8,10 @@ public class SingletonLazy {
 	}
 	
 	//2、创建静态的该类实例对象
-	private static SingletonLazy instance;
+	private static SingletonLazy instance = null;
 	
 	//3、创建开放的静态方法提供实例对象
-	public SingletonLazy getSingletonLazy() {
+	public static SingletonLazy getSingletonLazy() {
 		if (instance == null)
 			instance = new SingletonLazy();
 		return instance;
