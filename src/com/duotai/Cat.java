@@ -8,7 +8,7 @@ public class Cat extends Animal {
 	}
 	public Cat(String name,int age, double weight) {
 		super(name,age);
-		this.weight = weight;
+		this.setWeight(weight);
 	}
 	
 	public double getWeight() {
@@ -31,6 +31,9 @@ public class Cat extends Animal {
 	@Override
 	public void eat() {
 		System.out.println("Cat likes eating fish");
+	}
+	public void playBall() {
+		System.out.println("cat likes play balls.");		
 	}
 
 }

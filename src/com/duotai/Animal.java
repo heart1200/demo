@@ -8,7 +8,8 @@ public class Animal {
 		
 	}
 	public Animal(String name,int age) {
-		
+		this.setName(name);
+		this.setAge(age);
 	}
 	public int getAge() {
 		return age;
