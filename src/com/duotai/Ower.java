@@ -25,5 +25,30 @@ public class Ower {
 			dog.sleep();
 		}
 	}
+	
+	/*
+	 * 饲养何种宠物
+	 * 空闲时间多：养狗狗
+	 * 空闲时间不多:养猫咪
+	 */
+	//方案1，调用指定方法，返回猫或狗实例
+//	public Dog manyTime() {
+//		System.out.println("Ower has many time, will be feed a dog");
+//		return new Dog();
+//	}
+//	public Cat lessTime() {
+//		System.out.println("Ower has less time, should be feed a cat");
+//		return new Cat();
+//	}
+	//方案2
+	public Animal choice(boolean time) {
+		if (time) {
+			System.out.println("Ower has less time, should be feed a cat");
+			return new Cat();
+		}else {
+			System.out.println("Ower has many time, will be feed a dog");
+			return new Dog();
+		}
+	}
 
 }

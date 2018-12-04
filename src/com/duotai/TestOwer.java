@@ -8,6 +8,7 @@ public class TestOwer {
 		Animal animal1 = new Cat("qqq",4,5);
 		Cat cat = new Cat("hhh",2,3);
 		Animal animal2 = new Dog();
+//		boolean time;
 		
 		animal.eat();
 		animal1.eat();
@@ -23,6 +24,13 @@ public class TestOwer {
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		ower.feed(cat);
 		ower.feed(dog);
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+//		ower.manyTime();
+//		ower.lessTime();
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		boolean time = true;
+		Animal temp = ower.choice(time);
+		System.out.println(temp);
 	}
 	
 
